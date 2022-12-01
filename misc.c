@@ -293,7 +293,7 @@ char *buildinfo(const char *newline)
 #endif
 #if defined _WINDOWS
     {
-        int echm = has_embedded_chm();
+        int echm = -1;
         if (echm >= 0)
             strbuf_catf(buf, "%sEmbedded HTML Help file: %s", newline,
                         echm ? "yes" : "no");
